@@ -28,11 +28,11 @@ public class ContaBancaria {
     }
     //Caso o saldo seja maior que o saque ele irá diminuir o valor do saldo conforme o valor atribuido a variável Saque. 
     public void Sacar(double saldo) {
-        if (saldo >= Saque) {
+        if (saldo <= Saque) {
             this.saldo -= saldo;
         }else{
             //Caso o valor do Saque seja maior que o valor do saldo ele irá printar "Saldo insuficiente".
-            System.out.println("Saldo insuficiente");
+            System.out.println("Erro: nenhum valor no seu saldo foi alterado, seu valor de saque excede seu saldo");
         }
 
     }
